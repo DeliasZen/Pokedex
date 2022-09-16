@@ -1,1 +1,33 @@
-<p>pokemon-list works!</p>
+<main>
+
+  <div class="input">
+    <input #search class="input__text" type="text" placeholder="Type: 'Pikachu' or '25'"
+      (keyup)="searchPokemons(search.value)">
+  </div>
+
+  <div *ngIf="isLoading" class="progress-bar"></div>
+
+
+  <div class="pokemons" *ngIf="!isSearching" (scroll)="onScroll($event)">
+    <div class="pokemon" *ngFor="let pokemon of pokemons, let i = index"
+      [style]="{'background-color': colors[pokemon.types[0].type.name]}" (click)="onClick(pokemon)">
+      <p class=" id">№ <b>{{i +1}}</b></p>
+      <img [src]="pokemon.sprites?.front_default" alt="">
+      <p class="name">{{pokemon.name | uppercase}}</p>
+      <p class="type">Type: <b>{{pokemon.types[0].type.name}}</b></p>
+    </div>
+  </div>
+
+
+  <!-- SearchPokemon -->
+  <div class="pokemons" *ngIf="isSearching">
+    <div class="pokemon" [style]="{'background-color': colors[searchPokemon.types[0].type.name]}"
+      (click)="onClick(searchPokemon)">
+      <p class=" id">№ <b>{{searchPokemon.id}}</b></p>
+      <img [src]="searchPokemon.sprites?.front_default" alt="">
+      <p class="name">{{searchPokemon.name | uppercase}}</p>
+      <p class="type">Type: <b>{{searchPokemon.types[0].type.name}}</b></p>
+    </div>
+  </div>
+
+</main>

@@ -1,15 +1,41 @@
 @import url('https://fonts.googleapis.com/css2?family=Bangers&family=Open+Sans&display=swap');
+$font-header: 'Bangers';
+$font-main:'Open Sans', sans-serif;
+
+$color-main: #131313;
+$color-red: #ff1b1b;
+$color-white: #dbdbdb;
+
 
 *{
   padding: 0;
   margin: 0;
   box-sizing: border-box;
+////
+// overflow-y: hidden;
+////
+
 }
 
 html {
-  font-family: 'Open Sans', sans-serif;
+  font-family: $font-main;
+  font-size: 16px;
+  color: $color-main;
 }
 
 h1,h2,h3 {
-  font-family: 'Bangers';
+  font-family: $font-header;
+}
+
+h1 {
+color: $color-white;
+  letter-spacing: 0.13em;
+  font-size: 2.6em;
+}
+
+li {
+  font-family: $font-header;
+  color: $color-white;
+  font-size: 1.6em;
+  letter-spacing: 0.08em;
 }
