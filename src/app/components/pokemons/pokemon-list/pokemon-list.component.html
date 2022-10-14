@@ -12,20 +12,20 @@
     <div class="pokemon" *ngFor="let pokemon of pokemons, let i = index"
       [style]="{'background-color': colors[pokemon.types[0].type.name]}" (click)="onClick(pokemon)">
       <p class=" id">№ <b>{{i +1}}</b></p>
-      <img [src]="pokemon.sprites?.front_default" alt="">
-      <p class="name">{{pokemon.name | uppercase}}</p>
+      <img [src]="pokemon.sprites?.front_default" alt="{{pokemon.name}}">
+      <p class="name">{{pokemon.name | upperCap}}</p>
       <p class="type">Type: <b>{{pokemon.types[0].type.name}}</b></p>
     </div>
   </div>
 
-
+  <router-outlet></router-outlet>
   <!-- SearchPokemon -->
   <div class="pokemons" *ngIf="isSearching">
     <div class="pokemon" [style]="{'background-color': colors[searchPokemon.types[0].type.name]}"
       (click)="onClick(searchPokemon)">
       <p class=" id">№ <b>{{searchPokemon.id}}</b></p>
-      <img [src]="searchPokemon.sprites?.front_default" alt="">
-      <p class="name">{{searchPokemon.name | uppercase}}</p>
+      <img [src]="searchPokemon.sprites?.front_default" alt="{{searchPokemon.name}}">
+      <p class="name">{{searchPokemon.name | upperCap}}</p>
       <p class="type">Type: <b>{{searchPokemon.types[0].type.name}}</b></p>
     </div>
   </div>

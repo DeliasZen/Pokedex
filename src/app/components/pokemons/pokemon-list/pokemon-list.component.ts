@@ -3,6 +3,7 @@ import { PokemonDetail } from 'src/app/models/pokemon-detail';
 import { PokemonList, PokemonsData } from 'src/app/models/pokemon-list';
 import { PokemonsDataService } from 'src/app/services/pokemons-data.service';
 import { forkJoin, Observable, of } from 'rxjs';
+import { Router } from '@angular/router';
 
 
 @Component({
@@ -43,11 +44,17 @@ export class PokemonListComponent implements OnInit {
   searchPokemon!: PokemonDetail;
   // search?: string | number;
   // isLastPage: boolean = false;
+  selectedID: any;
 
   
-  constructor(private dataService: PokemonsDataService) { }
+  constructor(
+    private dataService: PokemonsDataService,  
+    private router: Router,
+    ) { }
 
   ngOnInit(): void {
+
+
     this.getPage(this.offset)
     this.dataService.getData(this.offset).subscribe(
       (res: PokemonsData) => {
@@ -110,12 +117,14 @@ export class PokemonListComponent implements OnInit {
   }
 
   getPokemonDetail(list: PokemonList[]) {
+
   }
 
 
 
-  onClick(e:PokemonDetail) {
-    console.log(e);
+  onClick(pokemon:PokemonDetail):void {
+    console.log(pokemon);
+    this.router.navigate(['pokemons', pokemon.id], {queryParams: {name: pokemon.name}}).then()
   }
 
 }
