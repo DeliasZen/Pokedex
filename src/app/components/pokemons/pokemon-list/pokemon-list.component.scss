@@ -36,9 +36,15 @@ main {
     background-color: #ff1b1b;
     border-radius: 10px
   } 
+
+////////
+    @media screen and (max-width: 600px) {
+      grid-template-columns: repeat(auto-fit, minmax(30%, 1fr));
+  }
   // @media screen and (max-height: 830px) {
   //   height: 60vh;
   // }
+
 }
 
 .pokemon {
