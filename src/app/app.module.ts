@@ -11,6 +11,12 @@ import { PokemonsModule } from './components/pokemons/pokemons.module';
 import { PokemonsRoutingModule } from './components/pokemons/pokemons-routing.module';
 import { UpperCapPipe } from './pipes/upper-cap.pipe';
 import { ReplinePipe } from './pipes/repline.pipe';
+import { CustomListComponent } from './components/custom/custom-list/custom-list.component';
+import { CustomFormComponent } from './components/custom/custom-form/custom-form.component';
+import { ReactiveFormsModule } from '@angular/forms';
+//
+import { FormsModule } from '@angular/forms';
+
 
 @NgModule({
   declarations: [
@@ -19,14 +25,19 @@ import { ReplinePipe } from './pipes/repline.pipe';
     PokemonListComponent,
     NavbarComponent,
     UpperCapPipe,
-    ReplinePipe
+    ReplinePipe,
+    CustomListComponent,
+    CustomFormComponent
     ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
     PokemonsModule,
-    PokemonsRoutingModule
+    PokemonsRoutingModule,
+    ReactiveFormsModule,
+    //
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

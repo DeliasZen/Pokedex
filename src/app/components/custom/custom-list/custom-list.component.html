@@ -1,0 +1,21 @@
+<main>
+  <h2>Create your own Pokemon</h2>
+  <div class="pokemons">
+    <!-- src="" -->
+    <div *ngFor="let pokemon of customService.pokemons" class="pokemon">
+      <p class="name">Name: <span>{{pokemon.name | uppercase}}</span></p>
+      <img [src]="!pokemon.img ?'assets/images/und.jpg' : pokemon.img" alt="{{pokemon.name}}">
+      <div class="stats">
+        <p><b>av. Stats</b></p>
+        <p>Type: <span>{{pokemon.type}}</span></p>
+        <p>Weight: <span>{{pokemon.weight}}</span></p>
+        <p>IQ: <span>{{pokemon.iq}}</span></p>
+        <p>Temper: <span>{{pokemon.temper}}</span></p>
+        <p class="datacr">created: {{pokemon.date | date: 'short'}}</p>
+      </div>
+    </div>
+    <div class="form">
+      <app-custom-form></app-custom-form>
+    </div>
+  </div>
+</main>

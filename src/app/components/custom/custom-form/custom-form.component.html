@@ -1,0 +1,52 @@
+<div class="content" *ngIf="ifActive; then thenBlock; else elseBlock;">
+</div>
+
+<ng-template #thenBlock>
+  <div>
+
+    <form [formGroup]="form" (ngSubmit)="onSubmit()" class="form">
+      <div>
+        <label for="name">Name:</label><br>
+        <input id="name" formControlName="name" placeholder="enter name">
+      </div>
+
+      <div>
+        <label for="img">Image URL:</label><br>
+        <input id="img" formControlName="img" placeholder="put url or leave empty">
+      </div>
+
+      <div>
+        <label for="type">Type:</label><br>
+        <input id="type" formControlName="type" placeholder="enter type">
+      </div>
+
+      <div>
+        <label for="weight">Weight:</label><br>
+        <input id="weight" formControlName="weight" placeholder="max 3 digits" type="number">
+      </div>
+
+      <div>
+        <label for="iq">IQ:</label><br>
+        <input id="iq" formControlName="iq" placeholder="enter IQ">
+      </div>
+
+      <div>
+        <label for="temper">temper:</label><br>
+        <input id="temper" formControlName="temper" placeholder="enter temper">
+      </div>
+
+      <div class="button">
+        <button [disabled]="form.invalid" type="submit">Done!</button>
+        <button (click)="ifActive = false">Cancel!</button>
+      </div>
+
+    </form>
+  </div>
+</ng-template>
+
+<ng-template #elseBlock>
+  <div class="crEl" (click)="ifActive = true">
+    <p>Create new Pokemon!</p>
+    <img src="assets/images/Plus.png" alt="">
+  </div>
+</ng-template>

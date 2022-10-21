@@ -9,7 +9,7 @@ main {
 
 //////
 .input {
-  margin-top: 7rem;
+  // margin-top: 7rem;
   justify-content: center;
   text-align: center;
 &__text {
@@ -38,8 +38,8 @@ main {
   } 
 
 ////////
-    @media screen and (max-width: 600px) {
-      grid-template-columns: repeat(auto-fit, minmax(30%, 1fr));
+    @media screen and (max-width: 576px) {
+      grid-template-columns: repeat(auto-fit, minmax(28%, 1fr));
   }
   // @media screen and (max-height: 830px) {
   //   height: 60vh;

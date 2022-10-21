@@ -54,7 +54,6 @@ export class PokemonListComponent implements OnInit {
 
   ngOnInit(): void {
 
-
     this.getPage(this.offset)
     this.dataService.getData(this.offset).subscribe(
       (res: PokemonsData) => {
@@ -97,7 +96,6 @@ export class PokemonListComponent implements OnInit {
     if(value === '') {
       this.isSearching = false;
       this.isLoading = false;
-      console.log(this.isSearching);
 
     } else {
       this.dataService.getDetails(value)
@@ -123,7 +121,6 @@ export class PokemonListComponent implements OnInit {
 
 
   onClick(pokemon:PokemonDetail):void {
-    console.log(pokemon);
     this.router.navigate(['pokemons', pokemon.id], {queryParams: {name: pokemon.name}}).then()
   }
 
