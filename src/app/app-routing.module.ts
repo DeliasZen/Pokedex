@@ -4,9 +4,8 @@ import { CustomListComponent } from './components/custom/custom-list/custom-list
 import { PokemonListComponent } from './components/pokemons/pokemon-list/pokemon-list.component';
 
 const routes: Routes = [
-  {path: '', redirectTo: 'pokemons', pathMatch: 'full'},
-  {path: 'pokemons', component: PokemonListComponent},
   {path: 'custom', component: CustomListComponent},
+  {path: '', redirectTo: 'pokemons', pathMatch: 'full'},
 ];
 
 @NgModule({

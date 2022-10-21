@@ -1,8 +1,7 @@
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
-import { PokemonList, PokemonsData } from '../models/pokemon-list';
-import { map } from "rxjs/operators";
+import { PokemonsData } from '../models/pokemon-list';
 import { PokemonDetail } from '../models/pokemon-detail';
 
 
