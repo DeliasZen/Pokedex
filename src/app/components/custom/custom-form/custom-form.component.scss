@@ -26,9 +26,13 @@ img {
   text-align: center;
   cursor: pointer;
 
+  img{
+    width: 15vw;
+    margin: auto;
+  }
   p {
     font-weight: 900;
-    font-size: 1.2rem;
+    font-size: 1.6rem;
   }
 }
 
@@ -63,9 +67,9 @@ button {
 
 
 form .ng-invalid {
-  border-bottom: 1px solid red;
+  border-bottom: 2px solid red;
 }
 
 form .ng-valid {
-  border-bottom: 1px solid skyblue;
+  border-bottom: 2px solid skyblue;
 }

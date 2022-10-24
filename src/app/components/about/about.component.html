@@ -1,0 +1,29 @@
+<main>
+  <h2>About Pokemons</h2>
+
+  <ng-container *ngIf="authService.isLoggedIn; then isAuth; else isNotAuth"></ng-container>
+
+  <ng-template #isAuth>
+    <div *ngIf="isEdited; else notEdit">
+      <div class="info">
+        <textarea class="textA" #aboutText type="text" [(ngModel)]="about"></textarea>
+      </div>
+      <button (click)="isEdited = false">Save</button>
+    </div>
+
+    <ng-template #notEdit>
+      <div class="info">
+
+        {{about}}
+
+
+      </div>
+      <button (click)="isEdited = true">Edit Text</button>
+    </ng-template>
+  </ng-template>
+
+  <ng-template #isNotAuth>
+    <h4>*You can edit this information after <a routerLink="/auth" routerLinkActive="active">logging in</a></h4>
+    <div class="info">{{about}}</div>
+  </ng-template>
+</main>

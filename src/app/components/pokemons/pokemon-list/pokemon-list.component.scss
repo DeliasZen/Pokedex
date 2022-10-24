@@ -9,7 +9,6 @@ main {
 
 //////
 .input {
-  // margin-top: 7rem;
   justify-content: center;
   text-align: center;
 &__text {
@@ -28,7 +27,7 @@ main {
   grid-template-columns: repeat(auto-fit, minmax(15%, 1fr));
   grid-gap: 2rem;
   overflow-y: scroll;
-  max-height: 80vh;
+  height: calc(100vh - 11.9rem);
   &::-webkit-scrollbar {
     background-color: rgb(255, 255, 255);
   }
@@ -37,13 +36,11 @@ main {
     border-radius: 10px
   } 
 
-////////
     @media screen and (max-width: 576px) {
       grid-template-columns: repeat(auto-fit, minmax(28%, 1fr));
   }
-  // @media screen and (max-height: 830px) {
-  //   height: 60vh;
-  // }
+
+
 
 }
 
@@ -83,7 +80,7 @@ main {
   width: 0%;
   height: 5px;
   background: linear-gradient(to right,#98d7a5,#DEF3FD,#97b3e6,#eaeda1,#FCF7DE,#ff1b1b);
-  margin-top: 10px;
+  margin-top: .6rem;
   border-radius: 12px;
   animation: bar 3s ease-out infinite;
   color: #ffffff;

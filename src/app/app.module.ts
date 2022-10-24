@@ -16,6 +16,8 @@ import { CustomFormComponent } from './components/custom/custom-form/custom-form
 import { ReactiveFormsModule } from '@angular/forms';
 //
 import { FormsModule } from '@angular/forms';
+import { AboutComponent } from './components/about/about.component';
+import { AuthComponent } from './components/auth/auth.component';
 
 
 @NgModule({
@@ -27,7 +29,9 @@ import { FormsModule } from '@angular/forms';
     UpperCapPipe,
     ReplinePipe,
     CustomListComponent,
-    CustomFormComponent
+    CustomFormComponent,
+    AboutComponent,
+    AuthComponent
     ],
   imports: [
     BrowserModule,
