@@ -1,0 +1,29 @@
+main {
+  text-align: center;
+  padding: 0rem 5.3rem 1.5rem;
+  h1{
+    margin-bottom: 2rem;
+    color: white;
+  }
+  p{
+    color: #dbdbdb;
+    font-size: 1.6rem;
+    font-weight: 700;
+  }
+}
+
+.container{
+  background: linear-gradient(to right,#46b474,#22b2da);
+  padding: 2rem;
+  border-radius: 18px;
+}
+
+ul{
+  a{
+    color: white;
+  }
+  list-style-type: none;
+  li{
+    margin-top: .6rem;
+  }
+}

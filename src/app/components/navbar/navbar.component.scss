@@ -22,7 +22,18 @@ header {
   display: flex;
   padding: 1.8em;
   user-select: none;
+  cursor: pointer;
 
+  .active {
+    color: $color-main;
+  }
+  h1 {
+    transition: color 0.25s;
+    
+    &:hover{
+      color: $color-main;
+    }
+  }
 }
 
 img{

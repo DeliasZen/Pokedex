@@ -18,6 +18,7 @@ import { ReactiveFormsModule } from '@angular/forms';
 import { FormsModule } from '@angular/forms';
 import { AboutComponent } from './components/about/about.component';
 import { AuthComponent } from './components/auth/auth.component';
+import { PokedexComponent } from './components/pokedex/pokedex.component';
 
 
 @NgModule({
@@ -31,7 +32,8 @@ import { AuthComponent } from './components/auth/auth.component';
     CustomListComponent,
     CustomFormComponent,
     AboutComponent,
-    AuthComponent
+    AuthComponent,
+    PokedexComponent
     ],
   imports: [
     BrowserModule,

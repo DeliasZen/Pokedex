@@ -24,7 +24,7 @@ export class AuthComponent implements OnInit {
       next: (res: any) => {
         this.setMessage()
         // if(!this.authService.redirectUrl) return
-        if(this.authService.isLoggedIn) this.router.navigate([this.authService.redirectUrl])
+        if(this.authService.isLoggedIn) this.router.navigate([this.authService.redirectUrl ? this.authService.redirectUrl : '/pokedex'])
       },
       error: err => console.log(err)
     })

@@ -8,7 +8,8 @@ import { AuthService } from 'src/app/services/auth.service';
 })
 export class AboutComponent implements OnInit {
 
-  about: string = 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus explicabo aliquid ducimus adipisci! Impedit quos minus dolore praesentium perferendis fuga, consectetur ut odit voluptates ducimus facilis omnis explicabo mollitia repudiandae!'
+  about: string = 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi earum quas cupiditate ad eveniet porro minima, impedit recusandae dignissimos neque dolores velit non pariatur fuga dolorem eius maxime! Velit, dolor. Atque reiciendis beatae nostrum! Repudiandae porro itaque voluptatum vitae non fugiat sunt ipsa placeat dolores, architecto ea vero odit pariatur iure molestias rerum beatae est sint.'
+  
   isEdited: boolean = false
 
   constructor(public authService: AuthService) { }

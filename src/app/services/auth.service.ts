@@ -7,7 +7,7 @@ import { delay, map, Observable, of } from 'rxjs';
 export class AuthService {
 
   isLoggedIn = false;
-  redirectUrl: string = '/about';
+  redirectUrl!: string;
 
   constructor() { }
 

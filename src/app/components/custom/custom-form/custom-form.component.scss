@@ -29,10 +29,18 @@ img {
   img{
     width: 15vw;
     margin: auto;
+    transition: .1s;
   }
   p {
     font-weight: 900;
     font-size: 1.6rem;
+  }
+
+  &:hover {
+    img{
+    transform: rotate(90deg);
+    opacity: 0.8;
+     }
   }
 }
 
