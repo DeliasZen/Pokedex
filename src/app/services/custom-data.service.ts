@@ -25,7 +25,7 @@ export class CustomDataService {
 
       // => POST
       createData(pokemon: CustomList) {
-        this.http.post<CustomList>(`${this.baseUrl}.json`, pokemon, this.httpOptions). subscribe(res => {
+        this.http.post<CustomList>(`${this.baseUrl}.json`, pokemon, this.httpOptions).subscribe(res => {
           this.pokemons.push({...{key: res.name},...pokemon})}
           )
       }
